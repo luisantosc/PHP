@@ -11,7 +11,7 @@
 				$linha=str_replace("\r\n","",$linha);
 				$array=explode(";",$linha);
 				if($array[0]==$time_m&&$array[1]==$time_v||$array[0]==$time_v&&$array[1]==$time_m){
-					echo "Jรก registrado";
+					echo "Já registrado";
 					$a=1;
 				}
 			}

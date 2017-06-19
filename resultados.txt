@@ -2,3 +2,4 @@ Flamengo;Vasco;1;2
 Botafogo;Vasco;3;1
 Flamengo;Fluminense;5;10
 Flamengo;Chape;1;2
+Botafogo;Chape;3;3

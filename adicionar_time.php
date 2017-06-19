@@ -18,7 +18,7 @@
 				$linha=fgets($handle);
 				$linha=str_replace("\r\n","",$linha);
 				if($linha==$time){
-					echo"Esse time já existe";
+					echo"Esse time j? existe";
 					$a=1;
 				}
 			}
