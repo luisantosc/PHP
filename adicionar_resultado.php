@@ -1,0 +1,30 @@
+<?php
+			$time_m=$_POST['time_mandante'];
+			$time_v=$_POST['time_visitante'];
+			$gols_m=$_POST['gols_mandante'];
+			$gols_v=$_POST['gols_visitante'];
+			$a=0;
+			$nome="resultados.txt";
+			$handle=fopen($nome,"r");
+			while(!feof($handle)){
+				$linha=fgets($handle);
+				$linha=str_replace("\r\n","",$linha);
+				$array=explode(";",$linha);
+				if($array[0]==$time_m&&$array[1]==$time_v||$array[0]==$time_v&&$array[1]==$time_m){
+					echo "Jรก registrado";
+					$a=1;
+				}
+			}
+			if($a==0){
+				$handle=fopen($nome,"a");
+				$array[0]=$time_m;
+				$array[1]=$time_v;
+				$array[2]=$gols_m;
+				$array[3]=$gols_v;
+				$add=implode(";",$array);
+				$add.="\r\n";
+				$n=fwrite($handle,$add);
+				fclose($handle);
+
+			}
+?>
